@@ -1,5 +1,6 @@
 ---
 - hosts: localhost
   connection: local
+  sudo: true
   roles:
     - postgres
