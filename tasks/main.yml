@@ -2,5 +2,5 @@
 
 - name: Install Postgresql
   package: >
-    name=postgresql2
+    name=postgresql
     state=installed
