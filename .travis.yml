@@ -10,14 +10,10 @@ addons:
   apt:
     packages:
     - python-pip
-    - redis
 
 install:
   # Install ansible
   - pip install ansible
-
-    # add support for fact caching in redis
-  - pip install redis
 
   # Check ansible version
   - ansible --version
@@ -35,8 +31,8 @@ install:
 script:
   # Basic role syntax check
   - ansible-playbook tests/test.yml -i tests/inventory --syntax-check
-  
-    # test run
+
+  # test run
   - ansible-playbook tests/test.yml -i tests/inventory
 
 notifications:
