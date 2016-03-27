@@ -10,10 +10,14 @@ addons:
   apt:
     packages:
     - python-pip
+    - redis
 
 install:
   # Install ansible
   - pip install ansible
+
+    # add support for fact caching in redis
+  - pip install redis
 
   # Check ansible version
   - ansible --version
